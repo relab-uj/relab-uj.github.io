@@ -9,6 +9,8 @@ Plain HTML and CSS, no build step, no dependencies. Edit `index.html`, push, don
 |---|---|
 | `index.html` | All content: hero, research, people, publications, contact |
 | `styles.css` | All styling, colours defined as variables at the top |
+| `pubs.bib` / `pubs.js` | Publications, loaded and rendered client-side — see below |
+| `images/hero-diagram.svg` | The hero illustration |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 | `CNAME.example` | Rename to `CNAME` when you point a custom domain here |
 
@@ -59,9 +61,12 @@ BibTeX entries. As soon as at least one entry has it, the page shows only the se
 ones, with a "Show N more publications" button underneath that reveals the rest when
 clicked. With no entry selected, it just shows everything in `pubs.bib` and no button.
 
-**Colours.** All of them are at the top of `styles.css` in `:root`. The red `--flip` is
-used in exactly one place, the changed cell in the hero grid. Keeping it to one place is
-the point, so if you add a second red element the motif loses its meaning.
+**Colours.** All of them are at the top of `styles.css` in `:root`. The red `--flip` marks
+something needs attention (currently just the "couldn't load publications" message) and is
+meant to stay rare on the page. Note that `images/hero-diagram.svg` and the files in `logo/`
+carry their own red (`#FF535B`) baked into the SVG rather than reading `--flip`
+(`#c1443f`) — the two are close but not identical; worth reconciling to one value at some
+point.
 
 **Adding a page.** Copy `index.html` to for example `publications.html`, delete the
 sections you do not need, and add a link in the `<nav>` of both files.
@@ -72,10 +77,11 @@ The `<title>` contains the full name and the university. That is what search eng
 index, and it is what separates you from the other RELabs (rehabilitation engineering at
 ETH, planetary spectroscopy at Brown, reliable systems at Stavanger). Do not shorten it.
 
-The hero grid is a row of tabular data with one feature changed, which is what a
-counterfactual explanation is. It is the only decorative element on the page and it earns
-its place by saying what the group works on. If you replace it, replace it with something
-equally specific rather than with a stock illustration.
+The hero illustration (`images/hero-diagram.svg`) shows the group's four kinds of input data
+— tabular, molecular, biological, and images and text — flowing into one model, which returns
+an explanation rather than a bare prediction. It is the only decorative element on the page
+and it earns its place by saying what the group works on. If you replace it, replace it with
+something equally specific rather than with a stock illustration.
 
 ## Local preview
 

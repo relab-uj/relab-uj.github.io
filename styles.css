@@ -118,32 +118,15 @@ h1 {
 
 .affil a { color: var(--muted); }
 
-/* ---------- counterfactual motif ---------- */
+/* ---------- research diagram motif ---------- */
 
 .motif { margin: 0; }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: .55rem;
-  max-width: 20rem;
-}
-
-.cell {
-  aspect-ratio: 1.6 / 1;
-  background: var(--paper-alt);
-  border: 1px solid var(--rule);
-}
-
-.cell.flip {
-  background: var(--flip);
-  border-color: var(--flip);
-  animation: flip-in 900ms ease-out 700ms both;
-}
-
-@keyframes flip-in {
-  from { background: var(--paper-alt); border-color: var(--rule); }
-  to   { background: var(--flip); border-color: var(--flip); }
+.motif-diagram {
+  display: block;
+  width: 100%;
+  max-width: 26rem;
+  height: auto;
 }
 
 .motif figcaption {
@@ -151,14 +134,10 @@ h1 {
   font-size: .875rem;
   line-height: 1.5;
   color: var(--muted);
-  max-width: 20rem;
+  max-width: 26rem;
   margin-top: 1rem;
   padding-top: .9rem;
   border-top: 1px solid var(--rule);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cell.flip { animation: none; }
 }
 
 /* ---------- sections ---------- */
@@ -371,5 +350,4 @@ address {
   .wrap { width: min(72rem, 100% - 2rem); }
   .top-inner { flex-direction: column; align-items: flex-start; gap: .8rem; }
   .top nav { gap: 1.1rem; flex-wrap: wrap; }
-  .grid { max-width: 100%; }
 }
