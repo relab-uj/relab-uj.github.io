@@ -289,6 +289,37 @@ h3:first-of-type { margin-top: 0; }
 
 .pubs-more:hover { text-decoration-thickness: 2px; }
 
+/* ---------- grants ---------- */
+
+.grants {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1.3rem;
+  max-width: 56rem;
+}
+
+.grants li {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--rule);
+}
+
+.grant-title {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.grant-meta {
+  font-family: var(--sans);
+  font-size: .9rem;
+  color: var(--muted);
+}
+
 /* ---------- join ---------- */
 
 .join-inner {
