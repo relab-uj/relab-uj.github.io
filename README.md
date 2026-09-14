@@ -12,6 +12,18 @@ Plain HTML and CSS, no build step, no dependencies. Edit `index.html`, push, don
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 | `CNAME.example` | Rename to `CNAME` when you point a custom domain here |
 
+## Logo
+
+The `logo/` folder holds the group's mark in the variants it's actually needed in:
+
+| File | Use |
+|---|---|
+| `logo-lockup.svg` | Full lockup (mark + wordmark). Used in the site header. |
+| `logo-lockup-dark.svg` | Same lockup, light strokes for a dark background. For slide footers/decks, not used on this site. |
+| `logo-mark.svg` | Mark alone, no text. Used next to places where the name is already written out, like the footer. |
+| `logo-avatar.svg` | 256×256 square version. Upload as the GitHub organisation's profile picture. |
+| `favicon.svg` | Simplified to four cells, one red, no smile — at 16px the full nine-cell grid and the arc blur into a smudge. Linked in `<head>`. |
+
 ## Putting it online
 
 1. Create a GitHub organisation, for example `relab-uj`.

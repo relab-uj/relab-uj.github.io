@@ -66,20 +66,9 @@ a:hover { text-decoration-thickness: 2px; }
   padding: 1.1rem 0;
 }
 
-.brand { text-decoration: none; color: inherit; }
+.brand { text-decoration: none; color: inherit; display: flex; align-items: center; }
 
-.brand-mark {
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: 1.2rem;
-  letter-spacing: -0.015em;
-}
-
-.brand-uj {
-  color: var(--muted);
-  font-weight: 500;
-  margin-left: .35em;
-}
+.brand-mark { display: block; }
 
 .top nav {
   font-family: var(--sans);
@@ -331,6 +320,14 @@ address {
   font-size: .9rem;
   color: var(--muted);
 }
+
+.foot-inner {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.foot-mark { flex-shrink: 0; }
 
 .foot a { color: var(--muted); }
 
