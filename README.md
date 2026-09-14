@@ -47,9 +47,13 @@ Then tick "Enforce HTTPS" in Settings, Pages. Nothing in the HTML has to change.
 
 ## Editing content
 
-**People.** Each person is one `<li>` inside a `<ul class="people">`. Copy an existing
-block, change the name and the topic line. Wrap the name in `<a href="...">` if the person
-has a page.
+**People.** Each person is one `<li>` inside a `<ul class="people">`, holding a
+`<div class="person-info">` with the name and topic line. Copy an existing block, change
+the name and the topic line. Wrap the name in `<a href="...">` if the person has a page.
+
+To add a photo, drop it in `images/` and add `<img class="person-photo" src="images/whoever.png" alt="">`
+as the first thing inside the `<li>`, before `.person-info` — see Marek Śmieja's entry.
+Photos are optional per person; entries without one just show the name and topic line.
 
 **Publications.** Listed automatically from `pubs.bib` by `pubs.js` — no HTML to edit.
 Drop BibTeX entries into `pubs.bib` and they render newest first, with authors from the
