@@ -49,9 +49,15 @@ Then tick "Enforce HTTPS" in Settings, Pages. Nothing in the HTML has to change.
 block, change the name and the topic line. Wrap the name in `<a href="...">` if the person
 has a page.
 
-**Publications.** Each paper is one `<li>` inside `<ol class="pubs">`, newest first, with
-three lines: title, authors, venue and links. The two entries currently there are
-placeholders, replace them. Bold your group's names if you want, with `<strong>`.
+**Publications.** Listed automatically from `pubs.bib` by `pubs.js` — no HTML to edit.
+Drop BibTeX entries into `pubs.bib` and they render newest first, with authors from the
+group bolded automatically (edit `CURRENT_GROUP_SURNAMES` in `pubs.js` when the roster
+changes).
+
+To feature only some entries instead of the whole file, add `selected={true}` to those
+BibTeX entries. As soon as at least one entry has it, the page shows only the selected
+ones, with a "Show N more publications" button underneath that reveals the rest when
+clicked. With no entry selected, it just shows everything in `pubs.bib` and no button.
 
 **Colours.** All of them are at the top of `styles.css` in `:root`. The red `--flip` is
 used in exactly one place, the changed cell in the hero grid. Keeping it to one place is

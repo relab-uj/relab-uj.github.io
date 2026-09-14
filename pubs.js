@@ -4,7 +4,7 @@
 // trailing commas).
 
 const CURRENT_GROUP_SURNAMES = [
-  'smieja', 'ksiazek', 'przewiezlikowski', 'bedychaj', 'bedyhaj',
+  'smieja', 'ksiazek', 'przewiezlikowski', 'bedychaj',
   'gainski', 'wydmanski', 'marszalek', 'maslowski', 'jurek',
 ];
 
@@ -205,14 +205,44 @@ function buildEntry(entry) {
   return li;
 }
 
-function renderPubs(list, entries) {
-  const sorted = entries
+function isSelected(fields) {
+  const v = (fields.selected || '').trim().toLowerCase();
+  return v !== '' && v !== 'false' && v !== '0' && v !== 'no';
+}
+
+function sortEntries(entries) {
+  return entries
     .map((e, idx) => ({ e, idx, year: parseInt(e.fields.year, 10) || 0 }))
     .sort((a, b) => b.year - a.year || a.idx - b.idx)
     .map((x) => x.e);
+}
+
+function renderPubs(list, entries) {
+  const sorted = sortEntries(entries);
+  const anySelected = sorted.some((e) => isSelected(e.fields));
 
   list.innerHTML = '';
-  sorted.forEach((entry) => list.appendChild(buildEntry(entry)));
+
+  if (!anySelected) {
+    sorted.forEach((entry) => list.appendChild(buildEntry(entry)));
+    return;
+  }
+
+  const selected = sorted.filter((e) => isSelected(e.fields));
+  const rest = sorted.filter((e) => !isSelected(e.fields));
+  selected.forEach((entry) => list.appendChild(buildEntry(entry)));
+
+  if (rest.length) {
+    const moreBtn = document.createElement('button');
+    moreBtn.type = 'button';
+    moreBtn.className = 'pubs-more';
+    moreBtn.textContent = `Show ${rest.length} more publication${rest.length === 1 ? '' : 's'}`;
+    moreBtn.addEventListener('click', () => {
+      rest.forEach((entry) => list.appendChild(buildEntry(entry)));
+      moreBtn.remove();
+    });
+    list.insertAdjacentElement('afterend', moreBtn);
+  }
 }
 
 async function init() {
