@@ -61,10 +61,9 @@ BibTeX entries. As soon as at least one entry has it, the page shows only the se
 ones, with a "Show remaining publications" button underneath that reveals the rest when
 clicked. With no entry selected, it just shows everything in `pubs.bib` and no button.
 
-**Grants.** Each grant is one `<li>` inside `<ol class="grants">`, two lines: title (wrap it
-in `<a href="...">` if it has a page) and a meta line with the programme, funding agency,
-PI, and years. Plain static HTML, no bib file — there's rarely more than a handful active
-at once.
+**Grants.** Each grant is one `<li>` inside `<ul class="grants">`, two lines: title, then a
+meta line with the programme, funding agency, PI, and years. Plain static HTML, no bib file
+— there's rarely more than a handful active at once.
 
 **Colours.** All of them are at the top of `styles.css` in `:root`. The red `--flip` marks
 something needs attention (currently just the "couldn't load publications" message) and is
