@@ -290,6 +290,13 @@ h3:first-of-type { margin-top: 0; }
   color: var(--muted);
 }
 
+.pubs-error {
+  font-family: var(--sans);
+  font-size: .95rem;
+  color: var(--muted);
+  border-left-color: var(--flip);
+}
+
 /* ---------- join ---------- */
 
 .join-inner {

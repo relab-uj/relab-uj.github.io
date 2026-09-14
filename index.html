@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script src="pubs.js" defer></script>
 </head>
 <body>
 
@@ -176,23 +177,8 @@
       <p class="section-note">Selected work. A full list is on
       <a href="https://scholar.google.com/citations?user=MOmnpZcAAAAJ">Google Scholar</a>.</p>
 
-      <ol class="pubs">
-        <!-- EDIT ME: one <li> per paper, newest first. Keep the same three lines. -->
-        <li>
-          <span class="pub-title">Paper title goes here</span>
-          <span class="pub-authors">A. Author, B. Author, M. Śmieja</span>
-          <span class="pub-venue">Venue, 2026 ·
-            <a href="#">arXiv</a> ·
-            <a href="#">code</a>
-          </span>
-        </li>
-        <li>
-          <span class="pub-title">Second paper title goes here</span>
-          <span class="pub-authors">C. Author, M. Śmieja</span>
-          <span class="pub-venue">Venue, 2025 ·
-            <a href="#">arXiv</a>
-          </span>
-        </li>
+      <ol class="pubs" id="pubs-list">
+        <li>Loading publications…</li>
       </ol>
     </div>
   </section>
