@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RELab UJ: Real-world and Explainable Learning Lab, Jagiellonian University</title>
+<meta name="description" content="RELab UJ is a machine learning group at the Jagiellonian University in Krakow, working on tabular and incomplete data, learning with few labels, explainable AI, and applications in chemoinformatics and bioinformatics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="./">
+      <span class="brand-mark">RELab<span class="brand-uj">UJ</span></span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#people">People</a>
+      <a href="#publications">Publications</a>
+      <a href="#join">Join us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <h1>Real-world and Explainable Learning Lab</h1>
+        <p class="lede">We develop machine learning for data that comes from real scientific
+        and industrial problems, and explanations that make a model's decisions legible
+        to the people who act on them.</p>
+        <p class="affil">Part of <a href="https://gmum.net/">GMUM</a> at the Faculty of
+        Mathematics and Computer Science, Jagiellonian University, Kraków.</p>
+      </div>
+
+      <figure class="motif" aria-labelledby="motif-caption">
+        <div class="grid" role="img" aria-label="A row of tabular data in which one feature has been changed, flipping the model's prediction from rejected to accepted.">
+          <span class="cell"></span><span class="cell"></span><span class="cell"></span>
+          <span class="cell"></span><span class="cell"></span><span class="cell"></span>
+          <span class="cell"></span><span class="cell"></span><span class="cell"></span>
+          <span class="cell"></span><span class="cell flip"></span><span class="cell"></span>
+          <span class="cell"></span><span class="cell"></span><span class="cell"></span>
+          <span class="cell"></span><span class="cell"></span><span class="cell"></span>
+        </div>
+        <figcaption id="motif-caption">One feature changed, the prediction reversed.
+        A counterfactual explanation is the smallest such change.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="research" class="band">
+    <div class="wrap">
+      <h2>Research</h2>
+      <dl class="topics">
+        <dt>Tabular and incomplete data</dt>
+        <dd>Representations and predictive models for tabular data, including tabular
+        foundation models and in-context learning, with missing values treated as part of
+        the problem rather than a preprocessing step.</dd>
+
+        <dt>Learning with few labels</dt>
+        <dd>Self-supervised and unsupervised representations, few-shot learning, density
+        estimation and anomaly detection, for settings where annotation is expensive or
+        simply unavailable.</dd>
+
+        <dt>Explainable AI</dt>
+        <dd>Counterfactual explanations, that is the smallest change to an input that
+        flips a decision, and explanations expressed in text and concepts rather than in
+        pixels or parameters.</dd>
+
+        <dt>Applications</dt>
+        <dd>Chemoinformatics and bioinformatics, where a prediction that is wrong or
+        unintelligible carries a real cost, and where the data rarely looks like a
+        benchmark.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="people" class="band alt">
+    <div class="wrap">
+      <h2>People</h2>
+
+      <h3>Group leader</h3>
+      <ul class="people">
+        <li>
+          <span class="name"><a href="https://mareksmieja.github.io/">Marek Śmieja</a></span>
+          <span class="role">Associate professor</span>
+        </li>
+      </ul>
+
+      <h3>Doctoral students</h3>
+      <ul class="people">
+        <li>
+          <span class="name">Marcin Przewięźlikowski</span>
+          <span class="role">Self-supervised learning, few-shot learning</span>
+        </li>
+        <li>
+          <span class="name">Piotr Gaiński</span>
+          <span class="role">Cheminformatics, generative models</span>
+        </li>
+        <li>
+          <span class="name">Witold Wydmański</span>
+          <span class="role">Bioinformatics, tabular data, large language models</span>
+        </li>
+        <li>
+          <span class="name">Patryk Marszałek</span>
+          <span class="role">Tabular foundation models</span>
+        </li>
+        <li>
+          <span class="name">Jan Masłowski</span>
+          <span class="role">Counterfactual explanations, explainable AI</span>
+        </li>
+        <li>
+          <span class="name">Kacper Jurek</span>
+          <span class="role">Explainability, vision-language models</span>
+        </li>
+      </ul>
+
+      <h3>Collaborators</h3>
+      <ul class="people">
+        <li>
+          <span class="name">Andrzej Bedychaj</span>
+          <span class="role">Visual grounding, explainable AI</span>
+        </li>
+        <li>
+          <span class="name">Piotr Wójcik</span>
+          <span class="role">Visual grounding, explainable AI</span>
+        </li>
+        <li>
+          <span class="name">Wojciech Batko</span>
+          <span class="role">Tabular data</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="publications" class="band">
+    <div class="wrap">
+      <h2>Publications</h2>
+      <p class="section-note">Selected work. A full list is on
+      <a href="https://scholar.google.com/citations?user=MOmnpZcAAAAJ">Google Scholar</a>.</p>
+
+      <ol class="pubs">
+        <!-- EDIT ME: one <li> per paper, newest first. Keep the same three lines. -->
+        <li>
+          <span class="pub-title">Paper title goes here</span>
+          <span class="pub-authors">A. Author, B. Author, M. Śmieja</span>
+          <span class="pub-venue">Venue, 2026 ·
+            <a href="#">arXiv</a> ·
+            <a href="#">code</a>
+          </span>
+        </li>
+        <li>
+          <span class="pub-title">Second paper title goes here</span>
+          <span class="pub-authors">C. Author, M. Śmieja</span>
+          <span class="pub-venue">Venue, 2025 ·
+            <a href="#">arXiv</a>
+          </span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="join" class="band alt">
+    <div class="wrap join-inner">
+      <div>
+        <h2>Join us</h2>
+        <p>We take doctoral students through the Jagiellonian University doctoral school,
+        and we supervise master's and bachelor's theses in the group's areas. If you want
+        to work on any of the topics above, write with a short description of what
+        interests you and what you have built so far.</p>
+        <p class="contact-line">
+          <a href="mailto:marek.smieja@uj.edu.pl">marek.smieja@uj.edu.pl</a>
+        </p>
+      </div>
+      <address>
+        Faculty of Mathematics and Computer Science<br>
+        Jagiellonian University<br>
+        ul. Łojasiewicza 6<br>
+        30-348 Kraków, Poland
+      </address>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>RELab UJ, Real-world and Explainable Learning Lab, Jagiellonian University.
+    Part of the <a href="https://gmum.net/">Group of Machine Learning Research (GMUM)</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+:root {
+  --ink: #11161c;
+  --paper: #fcfcfa;
+  --paper-alt: #f4f4ef;
+  --rule: #dddcd4;
+  --muted: #5a6470;
+  --link: #1f52c4;
+  --flip: #c1443f;
+
+  --sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --serif: "IBM Plex Serif", Georgia, serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+.skip:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 10;
+  background: var(--paper);
+  padding: .5rem .75rem;
+  border: 1px solid var(--ink);
+}
+
+.wrap {
+  width: min(72rem, 100% - 3rem);
+  margin-inline: auto;
+}
+
+/* ---------- header ---------- */
+
+.top {
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+}
+
+.top-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+}
+
+.brand { text-decoration: none; color: inherit; }
+
+.brand-mark {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: -0.015em;
+}
+
+.brand-uj {
+  color: var(--muted);
+  font-weight: 500;
+  margin-left: .35em;
+}
+
+.top nav {
+  font-family: var(--sans);
+  font-size: .95rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.top nav a { color: var(--ink); text-decoration: none; }
+.top nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* ---------- hero ---------- */
+
+.hero { padding: 5rem 0 4.5rem; }
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: center;
+}
+
+h1 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(2rem, 4.4vw, 3.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.4rem;
+  max-width: 16ch;
+}
+
+.lede {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 46ch;
+  margin: 0 0 1.3rem;
+}
+
+.affil {
+  font-family: var(--sans);
+  font-size: .95rem;
+  color: var(--muted);
+  max-width: 44ch;
+  margin: 0;
+}
+
+.affil a { color: var(--muted); }
+
+/* ---------- counterfactual motif ---------- */
+
+.motif { margin: 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .55rem;
+  max-width: 20rem;
+}
+
+.cell {
+  aspect-ratio: 1.6 / 1;
+  background: var(--paper-alt);
+  border: 1px solid var(--rule);
+}
+
+.cell.flip {
+  background: var(--flip);
+  border-color: var(--flip);
+  animation: flip-in 900ms ease-out 700ms both;
+}
+
+@keyframes flip-in {
+  from { background: var(--paper-alt); border-color: var(--rule); }
+  to   { background: var(--flip); border-color: var(--flip); }
+}
+
+.motif figcaption {
+  font-family: var(--sans);
+  font-size: .875rem;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 20rem;
+  margin-top: 1rem;
+  padding-top: .9rem;
+  border-top: 1px solid var(--rule);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cell.flip { animation: none; }
+}
+
+/* ---------- sections ---------- */
+
+.band {
+  padding: 4rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.band.alt { background: var(--paper-alt); }
+
+h2 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.55rem;
+  letter-spacing: -0.015em;
+  margin: 0 0 2rem;
+}
+
+h3 {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 2.4rem 0 .9rem;
+}
+
+h3:first-of-type { margin-top: 0; }
+
+.section-note {
+  font-family: var(--sans);
+  font-size: .95rem;
+  color: var(--muted);
+  margin: -1.2rem 0 2rem;
+}
+
+/* ---------- research ---------- */
+
+.topics {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 2.2rem 3.5rem;
+}
+
+.topics dt {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: .4rem;
+}
+
+.topics dd {
+  margin: 0;
+  max-width: 44ch;
+  color: #252c35;
+}
+
+/* ---------- people ---------- */
+
+.people {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: .9rem 2.5rem;
+}
+
+.people li {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: .8rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.name {
+  font-family: var(--sans);
+  font-weight: 500;
+}
+
+.role {
+  font-size: .95rem;
+  color: var(--muted);
+}
+
+/* ---------- publications ---------- */
+
+.pubs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1.6rem;
+  max-width: 56rem;
+  counter-reset: none;
+}
+
+.pubs li {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--rule);
+}
+
+.pub-title {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.pub-authors { color: #252c35; }
+
+.pub-venue {
+  font-family: var(--sans);
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+/* ---------- join ---------- */
+
+.join-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.join-inner p { max-width: 50ch; }
+
+.contact-line {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+}
+
+address {
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: .95rem;
+  line-height: 1.8;
+  color: var(--muted);
+  padding-top: .4rem;
+}
+
+/* ---------- footer ---------- */
+
+.foot {
+  border-top: 1px solid var(--rule);
+  padding: 2rem 0 3rem;
+  font-family: var(--sans);
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+.foot a { color: var(--muted); }
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 60rem) {
+  .hero-inner,
+  .join-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hero { padding: 3.5rem 0 3rem; }
+  h1 { max-width: 20ch; }
+}
+
+@media (max-width: 34rem) {
+  .wrap { width: min(72rem, 100% - 2rem); }
+  .top-inner { flex-direction: column; align-items: flex-start; gap: .8rem; }
+  .top nav { gap: 1.1rem; flex-wrap: wrap; }
+  .grid { max-width: 100%; }
+}
