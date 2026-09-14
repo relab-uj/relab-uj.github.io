@@ -58,7 +58,7 @@ changes).
 
 To feature only some entries instead of the whole file, add `selected={true}` to those
 BibTeX entries. As soon as at least one entry has it, the page shows only the selected
-ones, with a "Show N more publications" button underneath that reveals the rest when
+ones, with a "Show remaining publications" button underneath that reveals the rest when
 clicked. With no entry selected, it just shows everything in `pubs.bib` and no button.
 
 **Colours.** All of them are at the top of `styles.css` in `:root`. The red `--flip` marks
