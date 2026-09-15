@@ -6,6 +6,7 @@
   --muted: #5a6470;
   --link: #1f52c4;
   --flip: #c1443f;
+  --logo-red: #FF535B;
 
   --sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
   --serif: "IBM Plex Serif", Georgia, serif;
@@ -100,6 +101,8 @@ h1 {
   margin: 0 0 1.4rem;
   max-width: 16ch;
 }
+
+h1 .accent { color: var(--logo-red); }
 
 .lede {
   font-size: 1.2rem;
