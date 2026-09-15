@@ -339,7 +339,7 @@ h3:first-of-type { margin-top: 0; }
 
 .join-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
   gap: 3.5rem;
   align-items: start;
 }
@@ -349,6 +349,7 @@ h3:first-of-type { margin-top: 0; }
 .contact-line {
   font-family: var(--sans);
   font-size: 1.05rem;
+  margin: 0 0 .9rem;
 }
 
 address {
@@ -357,7 +358,6 @@ address {
   font-size: .95rem;
   line-height: 1.8;
   color: var(--muted);
-  padding-top: .4rem;
 }
 
 /* ---------- footer ---------- */
