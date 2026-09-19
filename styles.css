@@ -1,12 +1,12 @@
 :root {
-  --ink: #11161c;
-  --paper: #fcfcfa;
-  --paper-alt: #f4f4ef;
-  --rule: #dddcd4;
-  --muted: #5a6470;
-  --link: #1f52c4;
-  --flip: #c1443f;
-  --logo-red: #FF535B;
+  --ink: #f4f4f1;
+  --paper: #0d0e10;
+  --paper-alt: #17181b;
+  --rule: #2b2e34;
+  --muted: #9aa3ae;
+  --link: #7aa6ff;
+  --flip: #ff535b;
+  --card: #f4f4ef;
 
   --sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
   --serif: "IBM Plex Serif", Georgia, serif;
@@ -128,6 +128,9 @@ h1 {
   width: 100%;
   max-width: 26rem;
   height: auto;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
 }
 
 .motif figcaption {
@@ -201,7 +204,7 @@ h3:first-of-type { margin-top: 0; }
 .topic p {
   margin: 0;
   max-width: 44ch;
-  color: #252c35;
+  color: var(--ink);
 }
 
 /* ---------- people ---------- */
@@ -272,7 +275,7 @@ h3:first-of-type { margin-top: 0; }
   font-size: 1.05rem;
 }
 
-.pub-authors { color: #252c35; }
+.pub-authors { color: var(--ink); }
 
 .pub-venue {
   font-family: var(--sans);
