@@ -20,11 +20,11 @@ The `logo/` folder holds the group's mark in the variants it's actually needed i
 
 | File | Use |
 |---|---|
-| `logo-lockup.svg` | Full lockup (mark + wordmark), dark strokes. For light backgrounds — slide decks, documents — not used on this site now that the page itself is dark. |
-| `logo-lockup-dark.svg` | Same lockup, light strokes. Used in the site header. |
-| `logo-mark.svg` | Mark alone, dark strokes, no text. For light backgrounds. |
-| `logo-mark-dark.svg` | Mark alone, light strokes. Used in the footer, next to the name spelled out in text. |
-| `logo-avatar.svg` | 256×256 square version, dark strokes. Upload as the GitHub organisation's profile picture (those are shown on a light chrome regardless of site theme). |
+| `logo-lockup.svg` | Full lockup (mark + wordmark). Used in the site header. |
+| `logo-lockup-dark.svg` | Same lockup, light strokes for a dark background. For slide footers/decks, not used on this site. |
+| `logo-mark.svg` | Mark alone, no text. Used next to places where the name is already written out, like the footer. |
+| `logo-mark-dark.svg` | Same mark, light strokes for a dark background. Not currently used on this site — kept from a dark-theme experiment in case it comes back. |
+| `logo-avatar.svg` | 256×256 square version. Upload as the GitHub organisation's profile picture. |
 | `favicon.svg` | Simplified to four cells, one red, no smile — at 16px the full nine-cell grid and the arc blur into a smudge. Linked in `<head>`. |
 
 ## Putting it online
@@ -70,19 +70,16 @@ clicked. With no entry selected, it just shows everything in `pubs.bib` and no b
 meta line with the programme, funding agency, PI, and years. Plain static HTML, no bib file
 — there's rarely more than a handful active at once.
 
-**Colours.** All of them are at the top of `styles.css` in `:root`. The site is dark by
-design now — `--paper` is near-black, `--ink` near-white, `--muted` and the red `--flip`
-(`#ff535b`) are the exact grey and red baked into the logo files and `images/hero-diagram.svg`,
-so all three stay in sync instead of drifting apart. `--flip` marks something needs
-attention (currently just the "couldn't load publications" message) and is meant to stay
-rare on the page. Never hardcode a colour outside `:root` — every hex literal that showed
-up that way turned out to be unreadable the moment the theme changed.
+**Colours.** All of them are at the top of `styles.css` in `:root`. The red `--flip` marks
+something needs attention (currently just the "couldn't load publications" message) and is
+meant to stay rare on the page. Note that `images/hero-diagram.svg` and the files in `logo/`
+carry their own red (`#FF535B`) baked into the SVG rather than reading `--flip`
+(`#c1443f`) — the two are close but not identical; worth reconciling to one value at some
+point.
 
-**The hero diagram sits on its own light card.** `images/hero-diagram.svg` is drawn in dark
-strokes on the assumption of a light background, and redrawing it for dark mode would risk
-breaking it. Instead `.motif-diagram` gets its own light `--card` background and a border, so
-it reads as a framed illustration rather than invisible lines on black. If you ever redraw
-the diagram to work natively on dark, drop the `--card` background from that rule.
+A dark version of the whole site (near-black `--paper`, near-white `--ink`, the hero diagram
+framed in a light card) was tried and reverted — white worked better. `logo-lockup-dark.svg`
+and `logo-mark-dark.svg` are left over from that experiment in case it's worth another look.
 
 **Adding a page.** Copy `index.html` to for example `publications.html`, delete the
 sections you do not need, and add a link in the `<nav>` of both files.
