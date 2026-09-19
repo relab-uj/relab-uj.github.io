@@ -1,6 +1,6 @@
-# RELab UJ website
+# SMILE Lab @ UJ website
 
-Static site for RELab UJ (Real-world and Explainable Learning Lab), Jagiellonian University.
+Static site for SMILE Lab @ UJ (Marek Śmieja's machine learning group), Jagiellonian University.
 Plain HTML and CSS, no build step, no dependencies. Edit `index.html`, push, done.
 
 ## Files
@@ -82,8 +82,8 @@ sections you do not need, and add a link in the `<nav>` of both files.
 ## Two things worth keeping
 
 The `<title>` contains the full name and the university. That is what search engines
-index, and it is what separates you from the other RELabs (rehabilitation engineering at
-ETH, planetary spectroscopy at Brown, reliable systems at Stavanger). Do not shorten it.
+index, and "SMILE Lab" alone is generic enough to collide with other groups using the
+same pun. Do not shorten it.
 
 The hero illustration (`images/hero-diagram.svg`) shows the group's four kinds of input data
 — tabular, molecular, biological, and images and text — flowing into one model, which returns
